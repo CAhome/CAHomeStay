@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useForm, FieldValues } from "react-hook-form";
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
@@ -28,56 +28,46 @@ function Contact() {
   const searchParams = useSearchParams();
   const form = useForm({
     defaultValues: {
-      homeName: searchParams.get('property') || '',
-      nom: '',
-      email: '',
-      téléphone: '',
-      inquiry: '',
-      category: '',
-      message: ''
-    }
+      homeName: searchParams.get("property") || "",
+      nom: "",
+      email: "",
+      téléphone: "",
+      inquiry: "",
+      category: "",
+      message: "",
+    },
   });
   const [sending, setSending] = React.useState(false);
-  const [isLoggedIn, setisLoggedIn] = React.useState<boolean>(false);
-
-  React.useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    setisLoggedIn(isLoggedIn);
-  }, []);
 
   const onSubmit = async (data: FieldValues) => {
     setSending(true);
-    if (isLoggedIn) {
-      try {
-        const response1 = await fetch("/api/send", {
+
+    try {
+      const response1 = await fetch("/api/send", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response1.ok) {
+        form.reset();
+        await fetch("/api/PostPushOverNotification", {
           method: "POST",
-          body: JSON.stringify(data),
           headers: {
             "Content-Type": "application/json",
           },
         });
-
-        if (response1.ok) {
-          form.reset();
-          await fetch("/api/PostPushOverNotification", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
-          toast.success("Message envoyé avec succès!");
-        } else {
-          throw new Error("Erreur lors de l'envoi");
-        }
-      } catch (error) {
-        toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
-        console.error(error);
-      } finally {
-        setSending(false);
+        toast.success("Message envoyé avec succès!");
+      } else {
+        throw new Error("Erreur lors de l'envoi");
       }
-    } else {
-      toast.error("Vous avez pas un compte actif, veuillez vous connecter");
-      redirect("/register");
+    } catch (error) {
+      toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
+      console.error(error);
+    } finally {
+      setSending(false);
     }
   };
 
