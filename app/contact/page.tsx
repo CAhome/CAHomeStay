@@ -22,9 +22,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { redirect } from "next/navigation";
+import { Suspense } from "react";
 
-function Contact() {
+function ContactForm() {
   const searchParams = useSearchParams();
   const form = useForm({
     defaultValues: {
@@ -72,6 +72,171 @@ function Contact() {
   };
 
   return (
+    <Card>
+      <CardContent className="pt-6">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <FormField
+              control={form.control}
+              name="nom"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Full Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Votre nom" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Adresse email</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="email"
+                      placeholder="Votre email"
+                      {...field}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="téléphone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Numéro de téléphone</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Votre numéro de téléphone"
+                      {...field}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="homeName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>le nom de la maison(optionel)</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="text"
+                      placeholder="le nom de la maison"
+                      {...field}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="inquiry"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Type de demande</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Sélectionnez un type de demande" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="réservation">
+                        Questions de réservation
+                      </SelectItem>
+                      <SelectItem value="propriété">
+                        Informations sur la propriété
+                      </SelectItem>
+                      <SelectItem value="soutien">
+                        Service client
+                      </SelectItem>
+                      <SelectItem value="partenariat">
+                        Opportunités de partenariat
+                      </SelectItem>
+                      <SelectItem value="autre">Autre</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="category"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    Type maison , long terme ou court terme (optionel)
+                  </FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Sélectionnez un type de demande" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="réservation">
+                        Long terme
+                      </SelectItem>
+                      <SelectItem value="propriété">
+                        Court terme
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Comment pouvons-nous vous aider?"
+                      className="min-h-32"
+                      {...field}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <Button
+              type="submit"
+              className="w-full"
+              disabled={sending}
+            >
+              {sending ? "Envoi en cours..." : "Envoyer un message"}
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  );
+}
+
+function Contact() {
+  return (
     <div>
       {/* Hero Section */}
       <div className="bg-blue-600 text-white py-16">
@@ -91,169 +256,9 @@ function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Entrer en contact</h2>
-              <Card>
-                <CardContent className="pt-6">
-                  <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-4"
-                    >
-                      <FormField
-                        control={form.control}
-                        name="nom"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Full Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Votre nom" {...field} />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Adresse email</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="Votre email"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="téléphone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Numéro de téléphone</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Votre numéro de téléphone"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="homeName"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>le nom de la maison(optionel)</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="text"
-                                placeholder="le nom de la maison"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="inquiry"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Type de demande</FormLabel>
-                            <Select
-                              onValueChange={field.onChange}
-                              defaultValue={field.value}
-                            >
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Sélectionnez un type de demande" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="réservation">
-                                  Questions de réservation
-                                </SelectItem>
-                                <SelectItem value="propriété">
-                                  Informations sur la propriété
-                                </SelectItem>
-                                <SelectItem value="soutien">
-                                  Service client
-                                </SelectItem>
-                                <SelectItem value="partenariat">
-                                  Opportunités de partenariat
-                                </SelectItem>
-                                <SelectItem value="autre">Autre</SelectItem>
-                              </SelectContent>
-                            </Select>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="category"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>
-                              Type maison , long terme ou court terme (optionel)
-                            </FormLabel>
-                            <Select
-                              onValueChange={field.onChange}
-                              defaultValue={field.value}
-                            >
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Sélectionnez un type de demande" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="réservation">
-                                  Long terme
-                                </SelectItem>
-                                <SelectItem value="propriété">
-                                  Court terme
-                                </SelectItem>
-                              </SelectContent>
-                            </Select>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Message</FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Comment pouvons-nous vous aider?"
-                                className="min-h-32"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-
-                      <Button
-                        type="submit"
-                        className="w-full"
-                        disabled={sending}
-                      >
-                        {sending ? "Envoi en cours..." : "Envoyer un message"}
-                      </Button>
-                    </form>
-                  </Form>
-                </CardContent>
-              </Card>
+              <Suspense fallback={<div>Loading...</div>}>
+                <ContactForm />
+              </Suspense>
             </div>
 
             {/* Contact Info and Map */}
