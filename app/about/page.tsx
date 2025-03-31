@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/ui/footer";
@@ -50,7 +49,7 @@ function About() {
                   className="rounded-lg shadow-md"
                 /> */}
                 <h1 className="text-lg sm:text-xl font-bold text-blue-600">
-                  HomeStay CA
+                  StayHub CA
                 </h1>
               </div>
             </div>

@@ -1,14 +1,15 @@
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-  const { nom, email, téléphone, inquiry, category, message, homeName } = await req.json();
-  
+  const { nom, email, téléphone, inquiry, category, message, homeName } =
+    await req.json();
+
   try {
     const data = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'cahomestay@protonmail.com',
+      from: "onboarding@resend.dev",
+      to: "Stayhub.ca@gmail.com",
       subject: `Nouveau message de contact - ${inquiry}`,
       html: `
         <h2>Nouveau message de contact</h2>

@@ -316,7 +316,7 @@ function Contact() {
                         <div>
                           <h3 className="font-semibold text-lg">Email</h3>
                           <p className="text-gray-600">
-                            Support: CAHomeStay@protonmail.com
+                            Support: Stayhub.ca@gmail.com
                           </p>
                         </div>
                       </div>

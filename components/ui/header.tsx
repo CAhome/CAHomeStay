@@ -1,17 +1,7 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
-import { Button } from "./button";
-import { Menu } from "lucide-react";
 import { CardFooter } from "./card";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -29,7 +19,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 
-
 function Header() {
   const pathname = usePathname();
 
@@ -39,7 +28,7 @@ function Header() {
         <div className="flex items-center">
           <Link href="/">
             <h1 className="text-lg sm:text-xl font-bold text-blue-600">
-              HomeStay CA
+              StayHub CA
             </h1>
           </Link>
         </div>
@@ -103,16 +92,16 @@ function Header() {
         </NavigationMenu>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex space-x-3">
+        {/* <div className="hidden md:flex space-x-3">
           <Link href="/login">
             <Button variant="outline" size="sm">
               Se connecter
             </Button>
           </Link>
-        </div>
+        </div> */}
 
         {/* Mobile Menu */}
-        <Sheet>
+        {/* <Sheet>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6" />
@@ -172,7 +161,7 @@ function Header() {
               </div>
             </div>
           </SheetContent>
-        </Sheet>
+        </Sheet> */}
       </div>
       <CardFooter className="container mx-auto">
         <Breadcrumb>

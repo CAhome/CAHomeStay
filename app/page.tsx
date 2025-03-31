@@ -192,7 +192,7 @@ export default function Home() {
       <section className="py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-2 text-center">
-            Pourquoi choisir HomeStayCA
+            Pourquoi choisir StayHub CA
           </h2>
           <p className="text-center text-gray-600 mb-12">
             Nous rendons la recherche de votre prochaine maison simple et
