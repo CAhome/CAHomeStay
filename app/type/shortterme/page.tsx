@@ -12,13 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Footer from "@/components/ui/footer";
-import {
-  Calendar,
-  Search,
-  CheckCircle,
-  Clock,
-  Heart,
-} from "lucide-react";
+import { Calendar, Search, CheckCircle, Clock, Heart } from "lucide-react";
 import CardHouse from "@/components/ui/cardhouse";
 import photo15 from "@/public/image/photo15.png";
 import toronto2 from "@/public/image/toronto2.jpg";
@@ -68,6 +62,62 @@ import m8_p3 from "@/public/image/house/m8_p3.jpg";
 import m8_p4 from "@/public/image/house/m8_p4.jpg";
 import m8_p5 from "@/public/image/house/m8_p5.jpg";
 
+import m14_p1 from "@/public/image/house/m14_p1.jpg";
+import m14_p2 from "@/public/image/house/m14_p2.jpg";
+import m14_p3 from "@/public/image/house/m14_p3.jpg";
+import m14_p4 from "@/public/image/house/m14_p4.jpg";
+import m14_p5 from "@/public/image/house/m14_p5.jpg";
+import m15_p1 from "@/public/image/house/m15_p1.jpg";
+import m15_p2 from "@/public/image/house/m15_p2.jpg";
+import m15_p3 from "@/public/image/house/m15_p3.jpg";
+import m15_p4 from "@/public/image/house/m15_p4.jpg";
+import m15_p5 from "@/public/image/house/m15_p5.jpg";
+import m15_p6 from "@/public/image/house/m15_p6.jpg";
+import m15_p7 from "@/public/image/house/m15_p7.jpg";
+import m15_p8 from "@/public/image/house/m15_p8.jpg";
+import m15_p9 from "@/public/image/house/m15_p9.jpg";
+import m15_p10 from "@/public/image/house/m15_p10.jpg";
+import m16_p1 from "@/public/image/house/m16_p1.jpg";
+import m16_p2 from "@/public/image/house/m16_p2.jpg";
+import m16_p3 from "@/public/image/house/m16_p3.jpg";
+import m16_p4 from "@/public/image/house/m16_p4.jpg";
+import m16_p5 from "@/public/image/house/m16_p5.jpg";
+import m16_p6 from "@/public/image/house/m16_p6.jpg";
+import m16_p7 from "@/public/image/house/m16_p7.jpg";
+import m17_p1 from "@/public/image/house/m17_p1.jpg";
+import m17_p2 from "@/public/image/house/m17_p2.jpg";
+import m17_p3 from "@/public/image/house/m17_p3.jpg";
+import m17_p4 from "@/public/image/house/m17_p4.jpg";
+import m17_p5 from "@/public/image/house/m17_p5.jpg";
+import m17_p6 from "@/public/image/house/m17_p6.jpg";
+import m17_p7 from "@/public/image/house/m17_p7.jpg";
+import m17_p8 from "@/public/image/house/m17_p8.jpg";
+import m17_p9 from "@/public/image/house/m17_p9.jpg";
+import m17_p10 from "@/public/image/house/m17_p10.jpg";
+import m18_p1 from "@/public/image/house/m18_p1.jpg";
+import m18_p2 from "@/public/image/house/m18_p2.jpg";
+import m18_p3 from "@/public/image/house/m18_p3.jpg";
+import m18_p4 from "@/public/image/house/m18_p4.jpg";
+import m18_p5 from "@/public/image/house/m18_p5.jpg";
+import m19_p1 from "@/public/image/house/m19_p1.jpg";
+import m19_p2 from "@/public/image/house/m19_p2.jpg";
+import m19_p3 from "@/public/image/house/m19_p3.jpg";
+import m19_p4 from "@/public/image/house/m19_p4.jpg";
+import m19_p5 from "@/public/image/house/m19_p5.jpg";
+import m19_p6 from "@/public/image/house/m19_p6.jpg";
+import m20_p1 from "@/public/image/house/m20_p1.jpg";
+import m20_p2 from "@/public/image/house/m20_p2.jpg";
+import m20_p3 from "@/public/image/house/m20_p3.jpg";
+import m20_p4 from "@/public/image/house/m20_p4.jpg";
+import m20_p5 from "@/public/image/house/m20_p5.jpg";
+import m20_p6 from "@/public/image/house/m20_p6.jpg";
+import m20_p7 from "@/public/image/house/m20_p7.jpg";
+import m20_p8 from "@/public/image/house/m20_p8.jpg";
+import m20_p9 from "@/public/image/house/m20_p9.jpg";
+import m20_p10 from "@/public/image/house/m20_p10.jpg";
+import m20_p11 from "@/public/image/house/m20_p11.jpg";
+import m20_p12 from "@/public/image/house/m20_p12.jpg";
+
 const houseInfo = [
   {
     id: "id_1",
@@ -80,7 +130,8 @@ const houseInfo = [
     bed: 1,
     bath: 1,
     size: "500 sq.ft",
-    commentary: "située au 4ème étage de l'immeuble, eau, chauffage inclus dans le loyer",
+    commentary:
+      "située au 4ème étage de l'immeuble, eau, chauffage inclus dans le loyer",
   },
   {
     id: "id_2",
@@ -93,7 +144,8 @@ const houseInfo = [
     bed: 1,
     bath: 1,
     size: "500 sq.ft",
-    commentary: "située au 1er étage de l'immeuble, eau, chauffage inclus dans le loyer",
+    commentary:
+      "située au 1er étage de l'immeuble, eau, chauffage inclus dans le loyer",
   },
   {
     id: "id_3",
@@ -132,7 +184,8 @@ const houseInfo = [
     bed: 2,
     bath: 1,
     size: " sq.ft",
-    commentary: "Condo avec salon de bonne taille, Grand salon avec rangement dans l'unité. Nouvelle peinture en 2025. Loyer comprenant place de parking, chauffage et eau.",
+    commentary:
+      "Condo avec salon de bonne taille, Grand salon avec rangement dans l'unité. Nouvelle peinture en 2025. Loyer comprenant place de parking, chauffage et eau.",
   },
   {
     id: "id_6",
@@ -172,7 +225,141 @@ const houseInfo = [
     bath: 1,
     size: "236 sq.ft",
     commentary: "Loyer comprenant chauffage et eau",
-  }
+  },
+
+  {
+    id: "id_14",
+    images: [m14_p1, m14_p2, m14_p3, m14_p4, m14_p5],
+    type: "Populaire",
+    price: "$90/jour",
+    name: "Apartment",
+    available: true,
+    location: "Québec City, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "une suite bien aménagée de 2 chambres, avec salle de bain et cuisine. Situé dans un logement plus récents à Québec City, vous bénéficierez d'un accès facile aux autoroutes et aux transports en commun. Profitez d'options de divertissement à proximité, y compris des salles de cinéma, des terrains de jeux, des parcs et une variété de restaurants.",
+  },
+  {
+    id: "id_15",
+    images: [
+      m15_p1,
+      m15_p2,
+      m15_p3,
+      m15_p4,
+      m15_p5,
+      m15_p6,
+      m15_p7,
+      m15_p8,
+      m15_p9,
+      m15_p10,
+    ],
+    type: "Populaire",
+    price: "$68/jour",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "À 3 minutes de marche du casino de Montréal . Transport en commun et épicerie à moins de 10 minutes de marches . Zone calme et accessible à tous. Parking gratuit",
+  },
+  {
+    id: "id_16",
+    images: [m16_p1, m16_p2, m16_p3, m16_p4, m16_p5, m16_p6, m16_p7],
+    type: "Populaire",
+    price: "$96/jour",
+    name: "Apartment",
+    available: true,
+    location: "Québec City, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Une option d'hébergement abordable adaptée aux célibataires, aux étudiants et aux voyageurs d'affaires. Proche des parcs, des sentiers pédestres et des transports en commun. Parking gratuit. Wifi haut débit",
+  },
+  {
+    id: "id_17",
+    images: [
+      m17_p1,
+      m17_p2,
+      m17_p3,
+      m17_p4,
+      m17_p5,
+      m17_p6,
+      m17_p7,
+      m17_p8,
+      m17_p9,
+      m17_p10,
+    ],
+    type: "Populaire",
+    price: "$70/jour",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Montréal , 2 minutes à pied de la station place des arts , notre suite est idéalement située. Notre toute nouvelle suite d'une chambre dispose de tout ce dont vous avez besoin pour se sentir chez vous. Notre suite dispose d'un lit double et d'un salon avec une télévision connectée, afin que vous puissiez vous détendre et regarder toutes vos émissions préférées. Nous avons également inclus un espace de travail afin que vous puissiez travailler à domicile si nécessaire.",
+  },
+  {
+    id: "id_18",
+    images: [m18_p1, m18_p2, m18_p3, m18_p4, m18_p5],
+    type: "Populaire",
+    price: "$65/jour",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Situé au cœur de Montréal et à 5 minutes de marche de la station McGill, cet appartement situé au troisième étage avec salle de sport inclus. Vous offre tout ce dont vous avez besoin pour votre séjour. Toutes les factures sont comprises, Wifi, disponible et parking gratuit dans la rue premier venu premier servi.",
+  },
+  {
+    id: "id_19",
+    images: [m19_p1, m19_p2, m19_p3, m19_p4, m19_p5, m19_p6],
+    type: "Populaire",
+    price: "$60/jour",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "situé  à Montréal, l’appartement se trouve à huit minutes de marche de la station Joliette, toutes les charges sont incluses . accessible aux transports en commun et aux épiceries en moins de 5 minutes . Zone calme et relax",
+  },
+  {
+    id: "id_20",
+    images: [
+      m20_p1,
+      m20_p2,
+      m20_p3,
+      m20_p4,
+      m20_p5,
+      m20_p6,
+      m20_p7,
+      m20_p8,
+      m20_p9,
+      m20_p10,
+      m20_p11,
+      m20_p12,
+    ],
+    type: "Populaire",
+    price: "$68/jour",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Montréal , Situé à 10 minutes à pied de la station Atwater et à deux minutes à pied d’un arrêt d’autobus . Appartement au sous-sol facilement accessible, parking gratuit .",
+  },
 ];
 
 export default function ShotTerme() {
@@ -345,7 +532,9 @@ export default function ShotTerme() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {houseInfo.map((house, index) => {
-            return <CardHouse key={index} dataImage={house} time={"shortterme"} />;
+            return (
+              <CardHouse key={index} dataImage={house} time={"shortterme"} />
+            );
           })}
         </div>
       </section>
@@ -496,7 +685,6 @@ export default function ShotTerme() {
         </div>
       </section>
       <Footer />
-
     </div>
   );
 }
