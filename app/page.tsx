@@ -170,7 +170,7 @@ export default function Home() {
                 <CardHouse
                   key={index}
                   dataImage={house}
-                  time={"longterme"}
+                  type={"longterme"}
                   className="border-none"
                 />
               );
