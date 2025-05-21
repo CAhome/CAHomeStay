@@ -19,7 +19,7 @@ interface dataproperty {
     images: (string | StaticImageData)[]; // Changed to array of images
     type: string;
     price: string;
-     name: string;
+    name: string;
     available: boolean;
     location: string;
     bed: number;
@@ -28,10 +28,10 @@ interface dataproperty {
     commentary?: string;
   };
   className?: string;
-  time: string;
+  type: string;
 }
 
-function CardHouse({ dataImage, className }: dataproperty) {
+function CardHouse({ dataImage, className, type }: dataproperty) {
   return (
     <Card className={`${className} overflow-hidden`}>
       <div className="relative lg:h-[300px] h-[200px]">
@@ -100,13 +100,23 @@ function CardHouse({ dataImage, className }: dataproperty) {
           </div>
         </div>
       </CardContent>
-      <Link href={`/type/${dataImage.id}`} passHref>
-        <CardFooter className="px-4 py-3 bg-gray-50 flex justify-center items-center">
-          <Button size="sm" variant="secondary">
-            Voir les détails
-          </Button>
-        </CardFooter>
-      </Link>
+      {type === "longterme" ? (
+        <Link href={`/type/${dataImage.id}`} passHref>
+          <CardFooter className="px-4 py-3 bg-gray-50 flex justify-center items-center">
+            <Button size="sm" variant="secondary">
+              Voir les détails
+            </Button>
+          </CardFooter>
+        </Link>
+      ) : (
+        <Link href={`/type/${dataImage.id}`} passHref>
+          <CardFooter className="px-4 py-3 bg-gray-50 flex justify-center items-center">
+            <Button size="sm" variant="secondary">
+              Voir les détails
+            </Button>
+          </CardFooter>
+        </Link>
+      )}
     </Card>
   );
 }
