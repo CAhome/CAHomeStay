@@ -563,11 +563,17 @@ export default function Longterme() {
         <h2 className="text-2xl font-bold mb-8">Nos propriétés long terme</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {houseInfo.map((house, index) => {
-            return (
-              <CardHouse key={index} dataImage={house} type={"longterme"} />
-            );
-          })}
+          {[...houseInfo]
+            .sort((a, b) => {
+              // Sort by availability (available first)
+              if (a.available === b.available) return 0;
+              return a.available ? -1 : 1;
+            })
+            .map((house, index) => {
+              return (
+                <CardHouse key={index} dataImage={house} type={"longterme"} />
+              );
+            })}
         </div>
       </section>
 
