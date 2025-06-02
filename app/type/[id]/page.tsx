@@ -239,19 +239,6 @@ const houseInfo_longterme = [
     commentary: "Loyer comprenant chauffage et eau",
   },
   {
-    id: "id_8-longterme",
-    images: [m8_p1, m8_p2, m8_p3, m8_p4, m8_p5],
-    type: "Populaire",
-    price: "$1140/mois",
-    name: "studio",
-    available: true,
-    location: "Montreal, Canada",
-    bed: 1,
-    bath: 1,
-    size: "236 sq.ft",
-    commentary: "Loyer comprenant chauffage et eau",
-  },
-  {
     id: "id_9-longterme",
     images: [m9_p1, m9_p2, m9_p3, m9_p4, m9_p5, m9_p6, m9_p7, m9_p8],
     type: "Populaire",
@@ -329,6 +316,151 @@ const houseInfo_longterme = [
     size: "",
     commentary:
       "Proche de la station Cadillac (6 minutes de marches), Épicerie et commerce à côté, Loyer comprenant chauffage et eau, Possible d’ajouter le wifi",
+  },
+  {
+    id: "id_10-longterme",
+    images: [m10_p1, m10_p2, m10_p3, m10_p4],
+    type: "Populaire",
+    price: "$900/mois",
+    name: "studio",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "500 sq.ft",
+    commentary:
+      "suite rénovée studio proche de la station jean talon, située au 1er étage",
+  },
+  {
+    id: "id_11-longterme",
+    images: [m11_p1, m11_p2, m11_p3, m11_p4, m11_p5, m11_p6],
+    type: "Populaire",
+    price: "$1070/mois",
+    name: "suite rénovée",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary: "Loyer comprenant chauffage et eau, située au 2e étage",
+  },
+  {
+    id: "id_12-longterme",
+    images: [
+      m12_p1,
+      m12_p2,
+      m12_p3,
+      m12_p4,
+      m12_p5,
+      m12_p6,
+      m12_p7,
+      m12_p8,
+      m12_p9,
+      m12_p10,
+    ],
+    type: "Populaire",
+    price: "$1100/mois",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary: "Loyer comprenant chauffage et eau",
+  },
+  {
+    id: "id_13-longterme",
+    images: [m13_p1, m13_p2, m13_p3, m13_p4, m13_p5],
+    type: "Populaire",
+    price: "$1030/mois",
+    name: "Studio non meublé",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Proche de la station Cadillac (6 minutes de marches), Épicerie et commerce à côté, Loyer comprenant chauffage et eau, Possible d’ajouter le wifi",
+  },
+  {
+    id: "id_17-longterme",
+    images: [
+      m17_p1,
+      m17_p2,
+      m17_p3,
+      m17_p4,
+      m17_p5,
+      m17_p6,
+      m17_p7,
+      m17_p8,
+      m17_p9,
+      m17_p10,
+    ],
+    type: "Populaire",
+    price: "$1050/mois",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Montréal , 2 minutes à pied de la station place des arts , notre suite est idéalement située. Notre toute nouvelle suite d'une chambre dispose de tout ce dont vous avez besoin pour se sentir chez vous. Notre suite dispose d'un lit double et d'un salon avec une télévision connectée, afin que vous puissiez vous détendre et regarder toutes vos émissions préférées. Nous avons également inclus un espace de travail afin que vous puissiez travailler à domicile si nécessaire.",
+  },
+  {
+    id: "id_18-longterme",
+    images: [m18_p1, m18_p2, m18_p3, m18_p4, m18_p5],
+    type: "Populaire",
+    price: "$1090/mois",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Situé au cœur de Montréal et à 5 minutes de marche de la station McGill, cet appartement situé au troisième étage avec salle de sport inclus. Vous offre tout ce dont vous avez besoin pour votre séjour. Toutes les factures sont comprises, Wifi, disponible et parking gratuit dans la rue premier venu premier servi.",
+  },
+  {
+    id: "id_19-longterme",
+    images: [m19_p1, m19_p2, m19_p3, m19_p4, m19_p5, m19_p6],
+    type: "Populaire",
+    price: "$980/mois",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "situé  à Montréal, l’appartement se trouve à huit minutes de marche de la station Joliette, toutes les charges sont incluses . accessible aux transports en commun et aux épiceries en moins de 5 minutes . Zone calme et relax",
+  },
+  {
+    id: "id_20-longterme",
+    images: [
+      m20_p1,
+      m20_p2,
+      m20_p3,
+      m20_p4,
+      m20_p5,
+      m20_p6,
+      m20_p7,
+      m20_p8,
+      m20_p9,
+      m20_p10,
+      m20_p11,
+      m20_p12,
+    ],
+    type: "Populaire",
+    price: "$1025/mois",
+    name: "Apartment",
+    available: true,
+    location: "Montreal, Canada",
+    bed: 1,
+    bath: 1,
+    size: "",
+    commentary:
+      "Montréal , Situé à 10 minutes à pied de la station Atwater et à deux minutes à pied d’un arrêt d’autobus . Appartement au sous-sol facilement accessible, parking gratuit .",
   },
 ];
 
@@ -440,6 +572,7 @@ const houseInfo_shortterme = [
     size: "236 sq.ft",
     commentary: "Loyer comprenant chauffage et eau",
   },
+
 
   {
     id: "id_14-shortterme",
@@ -592,6 +725,8 @@ export default async function PropertyPage({ params }: Props) {
 
   const property = property_longterme || property_shortterme;
 
+  const property_id = property?.name + " " + id
+
   if (!property) {
     return <div>Propriété non trouvée</div>;
   }
@@ -654,7 +789,7 @@ export default async function PropertyPage({ params }: Props) {
 
           {property.available && (
             <Link
-              href={`/contact?property=${encodeURIComponent(property.name)}`}
+              href={`/contact?property=${encodeURIComponent(property_id)}`}
             >
               <Button className="w-full">Contacter pour cette propriété</Button>
             </Link>
