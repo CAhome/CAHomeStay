@@ -35,10 +35,10 @@ import m3_p8 from "@/public/image/house/m3_p8.jpg";
 
 const houseInfo = [
   {
-    id: "id_1",
+    id: "id_1-longterme",
     images: [m1_p1, m1_p2, m1_p3, m1_p4],
     type: "Populaire",
-    price: "$1300/night",
+    price: "$1300/mois",
     name: "Suite rénovée d'une chambre",
     available: true,
     location: "Vancouver, Canada",
@@ -49,10 +49,10 @@ const houseInfo = [
       "située au 4ème étage de l'immeuble, eau, chauffage inclus dans le loyer",
   },
   {
-    id: "id_2",
+    id: "id_2-longterme",
     images: [m2_p2, m2_p3, m2_p4, m2_p1, m2_p5, m2_p6],
     type: "Populaire",
-    price: "$1400/night",
+    price: "$1400/mois",
     name: "Suite rénovée d'une chambre",
     available: true,
     location: "Vancouver, Canada",
@@ -63,10 +63,10 @@ const houseInfo = [
       "située au 1er étage de l'immeuble, eau, chauffage inclus dans le loyer",
   },
   {
-    id: "id_3",
+    id: "id_3-longterme",
     images: [m3_p1, m3_p2, m3_p3, m3_p4, m3_p5, m3_p6, m3_p7, m3_p8],
     type: "Populaire",
-    price: "$1850/night",
+    price: "$1850/mois",
     name: "rez-de-chaussée de deux chambres",
     available: true,
     location: "Montreal, Canada",
